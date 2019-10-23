@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Trip{% endblock %}
+
+{% block body %}
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+		    <h1>Listing 1</h1>
+		    <hr>
+
+		    <table class="table table-bordered">
+		    	<thead>
+		    		<tr>
+		    			<th>trip</th>
+		    			<th>distance</th>
+		    			<th>measure interval</th>
+		    			<th>avg speed</th>
+		    		</tr>
+		    	<thead>
+		    	<tbody>
+
+		    		{% for trip in trips %}
+
+		    		<tr>
+		    			<td>{{ trip.name }}</td>
+		    			<td>{{ trip.distance }}</td>
+		    			<td>{{ trip.measureInterval }}</td>
+		    			<td>{{ trip.maxAvgSpeed }}</td>
+		    		</tr>
+
+		    		{% endfor %}
+
+		    	</tbody>
+		    </table>
+		   
+		</div>
+	</div>
+</div>
+{% endblock %}
